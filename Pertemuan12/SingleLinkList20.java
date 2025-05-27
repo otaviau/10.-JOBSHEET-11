@@ -7,7 +7,7 @@ public class SingleLinkList20 {
     }
     
     public void print(){
-        if (isEmpty()) {
+        if (!isEmpty()) {
             Node20 tmp = head;
             System.out.print("Isi Linked List: \t");
             while (tmp != null) {
