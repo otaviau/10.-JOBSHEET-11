@@ -1,19 +1,30 @@
+import java.util.Scanner;
 public class SLLLMain20 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         SingleLinkList20 sll = new SingleLinkList20();
 
-        Mahasiswa20 mhs1 = new Mahasiswa20("123", "Ana", "1D", 4.0);
-        Mahasiswa20 mhs2 = new Mahasiswa20("124", "Ari", "3H", 4.0);
-        Mahasiswa20 mhs3 = new Mahasiswa20("125", "Dirga", "1G", 4.0);
-        Mahasiswa20 mhs4 = new Mahasiswa20("126", "Aris", "2A", 4.0);
-    
-        sll.print();
-        sll.addFirst(mhs4);
-        sll.print();
-        sll.addLast(mhs1);
-        sll.print();
-        sll.insertAfter("Dirga", mhs3);
-        sll.insertAt(2, mhs2);
+        System.out.print("Berapa banyak data yang ingin dimasukkan? ");
+        int jumlah = sc.nextInt();
+        sc.nextLine();
+
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("Data ke-" + (i+1));
+            System.out.print("NIM: ");
+            String nim = sc.nextLine();
+            System.out.print("Nama: ");
+            String nama = sc.nextLine();
+            System.out.print("Kelas: ");
+            String kelas = sc.nextLine();
+            System.out.print("IPK: ");
+            double ipk = sc.nextDouble();
+            sc.nextLine();
+            
+            Mahasiswa20 mhs = new Mahasiswa20(nim, nama, kelas, ipk);
+            sll.addLast(mhs);
+        }
+
+        System.out.println("=== Data Mahasiswa ===");
         sll.print();
     }
 }

@@ -1,11 +1,9 @@
 public class SingleLinkList20 {
     Node20 head;
     Node20 tail;
-
     boolean isEmpty(){
         return (head==null);
     }
-    
     public void print(){
         if (!isEmpty()) {
             Node20 tmp = head;
@@ -19,7 +17,6 @@ public class SingleLinkList20 {
             System.out.println("Linked List Kosong");
         }
     } 
-
     public void addFirst(Mahasiswa20 input){
         Node20 ndInput = new Node20(input, null);
         if (isEmpty()) {
@@ -30,7 +27,6 @@ public class SingleLinkList20 {
             head = ndInput;
         }
     }
-
     public void addLast(Mahasiswa20 input){
         Node20 ndInput = new Node20(input, null);
         if (isEmpty()) {
@@ -41,7 +37,6 @@ public class SingleLinkList20 {
             tail = ndInput;
         }
     }
-
     public void insertAfter(String key, Mahasiswa20 input){
         Node20 ndInput = new Node20(input, null);
         Node20 temp = head;
