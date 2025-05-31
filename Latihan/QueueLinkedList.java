@@ -12,7 +12,7 @@ public class QueueLinkedList {
     }
 
     public boolean isFull() {
-        return false; // Karena linked list, tidak terbatas (selama memori cukup)
+        return false;
     }
 
     public void enqueue(Mahasiswa data) {
